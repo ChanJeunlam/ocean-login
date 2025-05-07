@@ -19,10 +19,15 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies 📦
-        run: npm install --legacy-peer-deps # 解决依赖冲突
+        run: npm install --legacy-peer-deps
 
       - name: Build 🔧
         run: npm run build
+        env:
+          NODE_ENV: production  # 确保设置生产环境
+
+      - name: Add .nojekyll file 📄
+        run: touch out/.nojekyll  # 在输出目录也添加 .nojekyll 文件
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4

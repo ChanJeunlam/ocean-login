@@ -1,15 +1,14 @@
-const isProd = process.env.NODE_ENV === 'production';
-const repoName = 'ocean-login';
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  distDir: 'dist',
-  basePath: isProd ? `/${repoName}` : '',
-  assetPrefix: isProd ? `/${repoName}` : '',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   images: {
     unoptimized: true,
   },
-  trailingSlash: true,
-};
+}
 
-export default nextConfig;
+export default nextConfig

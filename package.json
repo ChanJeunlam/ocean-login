@@ -6,8 +6,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
-    "deploy": "gh-pages -d out",
     "lint": "next lint"
   },
   "dependencies": {
@@ -58,16 +56,14 @@
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.5.5",
     "tailwindcss-animate": "^1.0.7",
-    "three": "latest",
     "vaul": "^0.9.6",
-    "zod": "^3.24.1"
+    "zod": "^3.24.1",
+    "three": "latest"
   },
   "devDependencies": {
     "@types/node": "^22",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "@types/three": "^0.176.0",
-    "gh-pages": "^6.3.0",
     "postcss": "^8",
     "tailwindcss": "^3.4.17",
     "typescript": "^5"
